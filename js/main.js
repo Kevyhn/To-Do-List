@@ -67,7 +67,7 @@ document.getElementById('add-task').addEventListener('click', () => {
         noTaskContainer.style.opacity = "1";
         let noTaskCode = `
                 <div class="no-task">
-                    <p>You need add a task</p>
+                    <p>You need to add a task</p>
                     <span class="material-icons close-alert">close</span>
                 </div>`;
         noTaskContainer.innerHTML = noTaskCode;
