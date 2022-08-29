@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+:root {
+    --color-main: rgb(208,181,0);
+    --background-gradient: linear-gradient(90deg, rgba(208,181,0,1) 0%, rgba(122,112,0,1) 100%);
+}
+
+body {
+    background: #222;
+    padding: 0 20px;
+}
+
+.frame {
+    position: relative;
+    top: 40px;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 20px;
+    background: #111;
+    border: 2px solid rgba(208,181,0,0.75);
+}
+
+.ctn-add-item {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.input-task {
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    background: none;
+}
+
+.add-icon {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    background: #000;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-icon span {
+    font-size: 30px;
+    color: var(--color-main);
+}
+
+.ctn-task {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background: #111;
+}
+
+.delete-task {
+    width: 300px;
+    background: #111;
+}
+
+.task {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    background: #111;
+}
+
+.task::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 300px;
+    height: 5px;
+    border-radius: 0 0 10px 10px;
+    background: var(--background-gradient);
+    transition: all 500ms;
+}
+
+.task-text {
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 500ms;
+}
+
+.icons-task {
+    display: flex;
+    align-items: center;
+}
+
+.icons-task .delete-icon span {
+    color: red;
+    height: 30px;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.icons-task .edit-icon span {
+    color: rgba(208,181,0,0.75);
+    width: 30px;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.complete {
+    text-decoration: line-through;
+    color: #49e200;
+}
+
+#no-task {
+    position: relative;
+    width: 100vw;
+    top: 0;
+    left: -20px;
+    color: #fff;
+    background: red;
+    transition: all 400ms;
+}
+
+#no-task .no-task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+#no-task .no-task span {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
